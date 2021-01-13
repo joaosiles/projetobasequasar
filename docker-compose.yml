@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  quasar:
+    build:
+      context: .
+    container_name: quasar
+    ports:
+      - 8080:8080
+    volumes:
+      - ./:/usr/app
+      - ./node_modules:/usr/app/node_modules
+    command: /bin/sh -c "quasar dev"
